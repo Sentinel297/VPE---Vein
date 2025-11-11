@@ -2,7 +2,7 @@
 <HediffDef>
 	<defName>VPE_Vein_Revenant_BaseSTNL</defName>
 	<label>Revenant</label>
-	<description>This person is a creature known as a revenant, they are a creature infected with BOR parasites that will resurrect them on death at the cost of forgetting some of their skills each time they die.</description>
+	<description>This person is a creature known as a Revenant, they are a creature infected with BOR parasites that will resurrect them on death at the cost of forgetting some of their skills each time they die.</description>
 	<hediffClass>VPE_Vein.Hediff_BaseRevenant</hediffClass>
 	<initialSeverity>1</initialSeverity>
 	<minSeverity>0</minSeverity>
@@ -48,7 +48,7 @@
 <HediffDef>
 	<defName>VPE_Vein_Revenant_VoidTypeSTNL</defName>
 	<label>Void-Type Revenant</label>
-	<description>This person is a creature known as a revenant, they are a creature infected with BOR parasites that will resurrect them on death at the cost of forgetting some of their skills each time they die.\n\nVoid-Type revenants possess the ability to use vestiges from fallen revenants to increase all of their skills by 1 without entering into a state of frenzy.</description>
+	<description>This person is a creature known as a Revenant, they are a creature infected with BOR parasites that will resurrect them on death at the cost of forgetting some of their skills each time they die.\n\nVoid-Type revenants possess the ability to use vestiges from fallen revenants to increase all of their skills by 1 without entering into a state of frenzy.</description>
 	<hediffClass>VPE_Vein.Hediff_BaseRevenant</hediffClass>
 	<initialSeverity>1</initialSeverity>
 	<minSeverity>0</minSeverity>
