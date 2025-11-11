@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<!-- Drain Attack -->
+
+<AbilityDef ParentName="AbilityTouchBase">
+	<defName>VPE_Revenant_Drain_Attack_STNL</defName>
+	<label>Drain Attack</label>
+	<description>Drain the blood of a dead or alive target by using an appendage made of solid blood, humanlike targets will refill the user's blood need and hemogen if they possess hemogenic capabilities.\n\nThis appendage may be used to drain specific elements in the target such as skills, genes and abilities.\nUsing this attack on another Revenant or Lost will drain their blood need by 40%.\n\nDraining a Queen will instantly kill it and will make this person a Void-Type Revenant.\n\nThis ability will restore 40% psyfocus upon draining the blood of a target.\n\nCertain anomalies may grant special abilities, the "Special drain" option will be available in such cases.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/DrainAttack</iconPath>
+	<!-- <category>Sanguophage</category> -->
+	<displayOrder>100</displayOrder>
+	<!-- <warmupEffecter>Bloodfeed_Warmup</warmupEffecter> -->
+	<!-- <warmupStartSound>Bloodfeed_Cast</warmupStartSound> -->
+	<cooldownTicksRange>180~180</cooldownTicksRange>
+	<hostile>True</hostile>
+	<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+	<verbProperties>
+		<verbClass>Verb_CastAbilityTouch</verbClass>
+		<soundCast>MeatExplosionNormal</soundCast>
+		<drawAimPie>true</drawAimPie>
+		<range>-1</range>
+		<warmupTime>2</warmupTime>
+		<targetParams>
+			<canTargetSelf>false</canTargetSelf>
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetAnimals>true</canTargetAnimals>
+			<canTargetMechs>true</canTargetMechs>
+			<canTargetBloodfeeders>false</canTargetBloodfeeders>
+			<canTargetItems>true</canTargetItems>
+			<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		</targetParams>
+	</verbProperties>
+	<comps>
+		<!-- <li Class="CompProperties_AbilityBloodfeederBite"> -->
+			<!-- <hemogenGain>0.2</hemogenGain> -->
+			<!-- <bloodFilthToSpawnRange>1</bloodFilthToSpawnRange> -->
+			<!-- <thoughtDefToGiveTarget>FedOn</thoughtDefToGiveTarget> -->
+			<!-- <opinionThoughtDefToGiveTarget>FedOn_Social</opinionThoughtDefToGiveTarget> -->
+			<!-- <resistanceGain>1</resistanceGain> -->
+		<!-- </li> -->
+		<li Class="VPE_Vein.CompProperties_Ability_DrainAttack"/>
+		<li Class="CompProperties_AbilityFleckOnTarget">
+			<fleckDef>BloodSplash</fleckDef>
+		</li>
+	</comps>
+</AbilityDef>
+
+<!-- Consume Bodies -->
+
+<AbilityDef>
+	<defName>VPE_Revenant_ConsumeBodies_STNL</defName>
+	<label>Consume Bodies</label>
+	<description>Mimic the harbinger tree's ability to break down organic corpses in order to refill the caster's need for blood.</description>
+	<iconPath>UI/CodexEntries/HarbingerTree</iconPath>
+	<!-- <category>Sanguophage</category> -->
+	<displayOrder>100</displayOrder>
+	<!-- <warmupEffecter>Bloodfeed_Warmup</warmupEffecter> -->
+	<!-- <warmupStartSound>Bloodfeed_Cast</warmupStartSound> -->
+	<cooldownTicksRange>180~180</cooldownTicksRange>
+	<hostile>false</hostile>
+	<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+	<targetRequired>false</targetRequired>
+	<verbProperties>
+		<verbClass>Verb_CastAbility</verbClass>
+		<drawAimPie>true</drawAimPie>
+				<!-- <soundCast>Pawn_Ghoul_Frenzy</soundCast> -->
+		<range>4.9</range>
+		<warmupTime>1</warmupTime>
+		<targetParams>
+			<canTargetSelf>true</canTargetSelf>
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetAnimals>false</canTargetAnimals>
+			<canTargetMechs>false</canTargetMechs>
+			<canTargetBloodfeeders>false</canTargetBloodfeeders>
+			<canTargetItems>false</canTargetItems>
+			<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+		</targetParams>
+	</verbProperties>
+	<comps>
+		<li Class="VPE_Vein.CompProperties_Ability_ConsumeCorpses"/>
+	</comps>
+</AbilityDef>
+
+<!-- Dark Psychic Shock -->
+
+<AbilityDef>
+	<defName>VPE_Vein_Revenant_DarkPsychicShock_Ability_STNL</defName>
+	<label>Dark Psychic Assault</label>
+	<description>Use the Revenant's ability to put targets into a coma for a while by using obscure psychic forces.</description>
+	<iconPath>UI/CodexEntries/Revenant</iconPath>
+	<cooldownTicksRange>30000</cooldownTicksRange>
+	<!-- 30 seconds -->
+	<hostile>true</hostile>
+	<groupAbility>false</groupAbility>
+	<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<aiCanUse>true</aiCanUse>
+	<ai_IsOffensive>true</ai_IsOffensive>
+	<targetRequired>true</targetRequired>
+	<statBases>
+		<Ability_Duration>500</Ability_Duration>
+	</statBases>
+	<verbProperties>
+		<verbClass>Verb_CastAbility</verbClass>
+		<drawAimPie>True</drawAimPie>
+		<requireLineOfSight>true</requireLineOfSight>
+		<nonInterruptingSelfCast>false</nonInterruptingSelfCast>
+		<soundCast>Pawn_Revenant_StartledScream</soundCast>
+		<targetable>true</targetable>
+		<range>14.9</range>
+		<warmupTime>1</warmupTime>
+		<targetParams>
+			<canTargetSelf>true</canTargetSelf> <!--why tho -->
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetAnimals>true</canTargetAnimals>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetHumans>true</canTargetHumans>
+			<canTargetMechs>true</canTargetMechs>
+			<!-- <canTargetBloodfeeders>false</canTargetBloodfeeders> -->
+			<!-- <canTargetItems>false</canTargetItems> -->
+			<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+		</targetParams>
+	</verbProperties>
+	<comps>
+		<li Class="VPE_Vein.CompProperties_AbilityPsychicShock"/>
+	</comps>
+</AbilityDef>
+
+<!-- Flesh Construct -->
+
+<AbilityDef>
+	<defName>VPE_Vein_Revenant_FleshConstruct_Ability_STNL</defName>
+	<label>Flesh Construct</label>
+	<description>Copy the fleshmass heart's ability to create creatures of flesh from biomass, targeting an organic corpse with this ability will cause it to turn into an allied fleshbeast.</description>
+	<iconPath>UI/CodexEntries/FleshmassHeart</iconPath>
+	<cooldownTicksRange>12500</cooldownTicksRange>
+	<!-- 30 seconds -->
+	<hostile>false</hostile>
+	<groupAbility>false</groupAbility>
+	<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<aiCanUse>false</aiCanUse>
+	<ai_IsOffensive>false</ai_IsOffensive>
+	<targetRequired>true</targetRequired>
+	<!-- <statBases> -->
+		<!-- <Ability_Duration>500</Ability_Duration> -->
+	<!-- </statBases> -->
+	<verbProperties>
+		<verbClass>Verb_CastAbility</verbClass>
+		<drawAimPie>True</drawAimPie>
+		<requireLineOfSight>true</requireLineOfSight>
+		<nonInterruptingSelfCast>false</nonInterruptingSelfCast>
+		<!-- <soundCast>Pawn_Revenant_StartledScream</soundCast> -->
+		<targetable>true</targetable>
+		<range>14.9</range>
+		<warmupTime>1</warmupTime>
+		<targetParams>
+			<canTargetSelf>false</canTargetSelf> <!--why tho -->
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetAnimals>false</canTargetAnimals>
+			<canTargetPawns>false</canTargetPawns>
+			<canTargetHumans>false</canTargetHumans>
+			<canTargetMechs>false</canTargetMechs>
+			<!-- <canTargetBloodfeeders>false</canTargetBloodfeeders> -->
+			<canTargetItems>true</canTargetItems>
+			<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		</targetParams>
+	</verbProperties>
+	<comps>
+		<li Class="VPE_Vein.CompProperties_Ability_FleshConstructSTNL"/>
+	</comps>
+</AbilityDef>
+
+<!-- Level 1 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_TierOneMiasmaSkill_STNL</defName>
+	<label>Release Miasma</label>
+	<description>Release a small concentrated amount of miasma into the target humanlike corpse, resulting in them becoming a Lost.\n\nLosts created by this method will fall into a coma for a random amount of time upon resurrection.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/MiasmaOne</iconPath>
+	<castTime>15</castTime>
+	<targetMode>Thing</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>15.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_ReleaseMiasma</abilityClass>
+	<castSound>DeadlifeRelease</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>1</level>
+			<order>1</order>
+			<psyfocusCost>0.40</psyfocusCost>
+			<entropyGain>70</entropyGain>
+			<!-- <prerequisites> -->
+			<!-- <li>VPE_Acolyte_DivineProtectionSTNL</li> -->
+			<!-- </prerequisites> -->
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_ConjureBloodBead_STNL</defName>
+	<label>Conjure Blood Bead</label>
+	<description>Through inefficient methods, conjure a blood bead capable of feeding sanguine creatures in a highly efficient manner.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/BloodBeadSmn</iconPath>
+	<castTime>60</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>15.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_ConjureBloodBead</abilityClass>
+	<castSound>PsycastPsychicEffect</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>1</level>
+			<order>2</order>
+			<psyfocusCost>0.80</psyfocusCost>
+			<entropyGain>80</entropyGain>
+			<!-- <prerequisites> -->
+			<!-- <li>VPE_Acolyte_DivineProtectionSTNL</li> -->
+			<!-- </prerequisites> -->
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 2 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_TierTwoMiasmaSkill_STNL</defName>
+	<label>Release Miasma Cloud</label>
+	<description>Release a larger cloud of miasma in an area, reanimating more corpses at once at the cost of a slightly longer coma.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/MiasmaTwo</iconPath>
+	<castTime>90</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>15.9</range>
+	<radius>3.9</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_ReleaseMiasmaAOE</abilityClass>
+	<castSound>DeadlifeRelease</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>2</level>
+			<order>1</order>
+			<psyfocusCost>0.50</psyfocusCost>
+			<entropyGain>95</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_TierOneMiasmaSkill_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_ConjureBloodSpring_STNL</defName>
+	<label>Conjure Blood Spring</label>
+	<description>Conjure forth a blood spring, a plant capable of passively producing blood beads at a slow rate.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/BloodSpringSMN</iconPath>
+	<castTime>90</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>15.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_SummonBuilding</abilityClass>
+	<castSound>PsycastPsychicPulse</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.40</psyfocusCost>
+			<entropyGain>50</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_ConjureBloodBead_STNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Vein.ModExtSummonBuilding">
+		<ThingToSpawn>VPE_Vein_BloodSpringSTNL</ThingToSpawn>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 3 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_CommandLost_STNL</defName>
+	<label>Command Lost</label>
+	<description>Gain control over the target Lost, allowing you to draft and control them more precisely.\n\nThis ability may also convert hostile Losts to the caster's faction.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/CommandLost</iconPath>
+	<castTime>30</castTime>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>15.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_CommandLost</abilityClass>
+	<castSound>Psycast_Skip_Pulse</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>3</level>
+			<order>1</order>
+			<psyfocusCost>0.15</psyfocusCost>
+			<entropyGain>20</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_TierTwoMiasmaSkill_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_BloodWeapon_STNL</defName>
+	<label>Blood Weapon</label>
+	<description>Consumes psyfocus in order to enhance the caster's attack damage.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/BloodWeapon</iconPath>
+	<castTime>15</castTime>
+	<targetMode>Self</targetMode>
+	<!-- <targetingParameters> -->
+	<!-- <canTargetLocations>false</canTargetLocations> -->
+	<!-- <canTargetSelf>True</canTargetSelf> -->
+	<!-- <canTargetAnimals>false</canTargetAnimals> -->
+	<!-- <canTargetPawns>true</canTargetPawns> -->
+	<!-- <canTargetHumans>true</canTargetHumans> -->
+	<!-- <canTargetMechs>false</canTargetMechs> -->
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	<!-- </targetingParameters> -->
+	<chance>0</chance>
+	<range>0</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_BloodWeaponToggle</abilityClass>
+	<castSound>PsycastPsychicEffect</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0</psyfocusCost>
+			<entropyGain>20</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_CommandLost_STNL</li>
+			<li>VPE_Vein_BORRevenant_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_BORRevenant_STNL</defName>
+	<label>BOR Implantation: Revenant</label>
+	<description>Implant a dead or alive humanlike creature's heart with the BOR parasite, this parasite will cause the target to disperse into a cloud of ash and to return as a Revenant after some time.\n\nRevenants are humans that are infected by the BOR parasite, it will keep resurrecting its host as long as their heart remains intact. Revenants need blood to sustain themselves and will become Losts if this need reaches 0%.\n\nRevenants cannot have their age altered by any means.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/TurnRev</iconPath>
+	<castTime>60</castTime>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>True</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>15.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_TurnRevenant</abilityClass>
+	<castSound>PsycastPsychicEffect</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>3</level>
+			<order>3</order>
+			<psyfocusCost>0.20</psyfocusCost>
+			<entropyGain>20</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_ConjureBloodSpring_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 4 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_CommandLostAoE_STNL</defName>
+	<label>Greater Command Lost</label>
+	<description>Gain control over every Lost in the target area, allowing you to draft and control them more precisely.\n\nThis ability may also convert hostile Losts to the caster's faction.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/CommandLost_Two</iconPath>
+	<castTime>90</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+	<canTargetLocations>True</canTargetLocations>
+	<canTargetSelf>false</canTargetSelf>
+	<canTargetAnimals>false</canTargetAnimals>
+	<canTargetPawns>false</canTargetPawns>
+	<canTargetHumans>false</canTargetHumans>
+	<canTargetMechs>false</canTargetMechs>
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	</targetingParameters>
+	<chance>0</chance>
+	<range>14.9</range>
+	<radius>5.9</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_CommandLostAoE</abilityClass>
+	<castSound>PsycastPsychicEffect</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>4</level>
+			<order>1</order>
+			<psyfocusCost>0.30</psyfocusCost>
+			<entropyGain>20</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_CommandLost_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_Ichor_Medicine_STNL</defName>
+	<label>Ichor Medicine</label>
+	<description>Convert 10% of the caster's blood need into Ichor medicine, capable of doubling the target's regeneration and immunity gain speed for a while.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/IchorMedicine</iconPath>
+	<durationTime>30000</durationTime>
+	<castTime>15</castTime>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+	<canTargetLocations>false</canTargetLocations>
+	<canTargetSelf>true</canTargetSelf>
+	<canTargetAnimals>true</canTargetAnimals>
+	<canTargetPawns>true</canTargetPawns>
+	<canTargetHumans>true</canTargetHumans>
+	<canTargetMechs>false</canTargetMechs>
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<jobDef>VFEA_GotoTargetAndUseAbility</jobDef>
+	<requireLineOfSight>false</requireLineOfSight>
+	<showUndrafted>True</showUndrafted>
+	<distanceToTarget>1.9</distanceToTarget>
+	<range>999999</range>
+
+	
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_IchorMedicine</abilityClass>
+	<castSound>PsycastPsychicPulse</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>4</level>
+			<order>2</order>
+			<psyfocusCost>0.15</psyfocusCost>
+			<entropyGain>20</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_BORRevenant_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 5 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_GaolOfTheMist_STNL</defName>
+	<label>Gaol Of The Mist</label>
+	<description>Release miasma across the entire region, animating all humanlike corpses as Lost after a long coma.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/Gaol</iconPath>
+	<!-- <durationTime>30000</durationTime> -->
+	<castTime>15</castTime>
+	<targetMode>Self</targetMode>
+	<!-- <targetingParameters> -->
+	<!-- <canTargetLocations>false</canTargetLocations> -->
+	<!-- <canTargetSelf>true</canTargetSelf> -->
+	<!-- <canTargetAnimals>true</canTargetAnimals> -->
+	<!-- <canTargetPawns>true</canTargetPawns> -->
+	<!-- <canTargetHumans>true</canTargetHumans> -->
+	<!-- <canTargetMechs>false</canTargetMechs> -->
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	<!-- </targetingParameters> -->
+	<chance>0</chance>
+	<range>0</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_GaolOfTheMist</abilityClass>
+	<castSound>Psycast_Neuroquake_Effect</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>5</level>
+			<order>1</order>
+			<psyfocusCost>0.60</psyfocusCost>
+			<entropyGain>70</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_CommandLostAoE_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_ConjureMistle_STNL</defName>
+	<label>Conjure Mistle</label>
+	<description>Conjure forth a mistle, a plant capable of increasing the toxic environment resistance of nearby Revenants to prevent them from frenzying around the Lost.\n\nFallen Revenants will reform around this mistle.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/ConjureMistle</iconPath>
+	<castTime>15</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>15.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_SummonBuilding</abilityClass>
+	<castSound>PsycastPsychicEffect</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>5</level>
+			<order>2</order>
+			<psyfocusCost>0.49</psyfocusCost>
+			<entropyGain>50</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_Ichor_Medicine_STNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Vein.ModExtSummonBuilding">
+		<ThingToSpawn>VPE_Vein_MistleSTNL</ThingToSpawn>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 6 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_BOR_Awakening_STNL</defName>
+	<label>BOR Awakening</label>
+	<description>Awaken the long buried intelligence of a Lost, allowing them to use equipment and granting them the ability to work.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/BOR_Awakening</iconPath>
+	<!-- <durationTime>30000</durationTime> -->
+	<castTime>15</castTime>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+	<canTargetLocations>false</canTargetLocations>
+	<canTargetSelf>false</canTargetSelf>
+	<canTargetAnimals>true</canTargetAnimals>
+	<canTargetPawns>true</canTargetPawns>
+	<canTargetHumans>true</canTargetHumans>
+	<canTargetMechs>false</canTargetMechs>
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	</targetingParameters>
+	<chance>0</chance>
+	<range>14.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_BOR_Awakening</abilityClass>
+	<castSound>AgonyPulse_Cast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>6</level>
+			<order>1</order>
+			<psyfocusCost>0.90</psyfocusCost>
+			<entropyGain>80</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_GaolOfTheMist_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_Blood_Forest_STNL</defName>
+	<label>Blood Forest</label>
+	<description>Cause a sudden growth of a large blood spring concentration in the target area.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/BloodForestSTNL</iconPath>
+	<!-- <durationTime>30000</durationTime> -->
+	<castTime>15</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+	<canTargetLocations>true</canTargetLocations>
+	<canTargetSelf>false</canTargetSelf>
+	<canTargetAnimals>false</canTargetAnimals>
+	<canTargetPawns>false</canTargetPawns>
+	<canTargetHumans>false</canTargetHumans>
+	<canTargetMechs>false</canTargetMechs>
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	</targetingParameters>
+	<chance>0</chance>
+	<range>14.9</range>
+	<radius>8.9</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_BloodForest</abilityClass>
+	<castSound>PsycastPsychicPulse</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>6</level>
+			<order>2</order>
+			<psyfocusCost>0.95</psyfocusCost>
+			<entropyGain>120</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_ConjureMistle_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 7 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_Great_Collapse_STNL</defName>
+	<label>The Great Collapse</label>
+	<description>Release a large amount of miasma into the ground, causing a horde of loyal Losts to emerge from the ground to fight your foes.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/GreatCollapse</iconPath>
+	<!-- <durationTime>30000</durationTime> -->
+	<castTime>15</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+	<canTargetLocations>true</canTargetLocations>
+	<canTargetSelf>false</canTargetSelf>
+	<canTargetAnimals>false</canTargetAnimals>
+	<canTargetPawns>false</canTargetPawns>
+	<canTargetHumans>false</canTargetHumans>
+	<canTargetMechs>false</canTargetMechs>
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	</targetingParameters>
+	<chance>0</chance>
+	<range>14.9</range>
+	<radius>7</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_GreatCollapse</abilityClass>
+	<castSound>VoidMonolith_ActivatedL2L3</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>7</level>
+			<order>1</order>
+			<psyfocusCost>0.95</psyfocusCost>
+			<entropyGain>150</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_BOR_Awakening_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_Red_Mist_STNL</defName>
+	<label>Red Mist</label>
+	<description>Fall into a coma, while in this coma for as long as you are kept fed a red mist shall surround your base, making it impossible for any incident to happen.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/RedMist</iconPath>
+	<!-- <durationTime>30000</durationTime> -->
+	<castTime>15</castTime>
+	<targetMode>Self</targetMode>
+	<!-- <targetingParameters> -->
+	<!-- <canTargetLocations>true</canTargetLocations> -->
+	<!-- <canTargetSelf>false</canTargetSelf> -->
+	<!-- <canTargetAnimals>false</canTargetAnimals> -->
+	<!-- <canTargetPawns>false</canTargetPawns> -->
+	<!-- <canTargetHumans>false</canTargetHumans> -->
+	<!-- <canTargetMechs>false</canTargetMechs> -->
+	<!-- <canTargetItems>true</canTargetItems> -->
+	<!-- <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable> -->
+	<!-- </targetingParameters> -->
+	<chance>0</chance>
+	<range>0</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_RedMist</abilityClass>
+	<castSound>Psycast_Neuroquake_Effect</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>7</level>
+			<order>2</order>
+			<psyfocusCost>0</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_Blood_Forest_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 8 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Vein_Queen_STNL</defName>
+	<label>Queen</label>
+	<description>Create a modified BOR Parasite, a perfect fusion between both Revenant and Lost, when inserted into a host it will grant them both the Immortality and constant growth through death of the lost as well as the capability of using psychic abilities.\n\nUsing this ability on a target will kill them and the caster, the target will eventually return after some time while the caster won't.\n\nThe user must have a level 30 or higher psylink to use this ability on themselves, which will result in them gaining the bonus of this ability without dying.</description>
+	<iconPath>UI_VeinSTNL/Abilities/Vein/Wrath</iconPath>
+	<!-- <durationTime>30000</durationTime> -->
+	<castTime>15</castTime>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+	<canTargetLocations>false</canTargetLocations>
+	<canTargetSelf>true</canTargetSelf>
+	<canTargetAnimals>false</canTargetAnimals>
+	<canTargetPawns>true</canTargetPawns>
+	<canTargetHumans>true</canTargetHumans>
+	<canTargetMechs>false</canTargetMechs>
+	<canTargetItems>true</canTargetItems>
+	<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	<range>14.9</range>
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<abilityClass>VPE_Vein.Ability_Queen</abilityClass>
+	<castSound>PsychicInsanityLanceCast</castSound>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Vein_Dweller_STNL</path>
+			<level>8</level>
+			<order>1</order>
+			<psyfocusCost>0.90</psyfocusCost>
+			<entropyGain>300</entropyGain>
+			<prerequisites>
+			<li>VPE_Vein_Red_Mist_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+</Defs>

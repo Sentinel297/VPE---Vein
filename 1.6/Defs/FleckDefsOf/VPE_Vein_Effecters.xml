@@ -1,0 +1,414 @@
+<Defs>
+
+<!-- Lost Miasma -->
+
+<ThingDef ParentName="MoteBase">
+	<defName>VPE_Vein_Ability_MiasmaLost_Fleck_RedSTNL</defName>
+	<graphicData>
+		<texPath>Things/Mote/Smoke</texPath>
+		<color>(255, 0, 0, 115)</color>
+	</graphicData>
+	<altitudeLayer>MoteOverhead</altitudeLayer>
+	<mote>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.03</solidTime>
+		<fadeOutTime>0.5</fadeOutTime>
+		<growthRate>-0.7</growthRate>
+		<collide>false</collide>
+		<speedPerTime>-22</speedPerTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+	</mote>
+</ThingDef>
+
+<ThingDef ParentName="MoteBase">
+	<defName>VPE_Vein_Ability_MiasmaLost_Fleck_BlackSTNL</defName>
+	<graphicData>
+		<texPath>Things/Mote/Smoke</texPath>
+		<color>(0, 0, 0, 255)</color>
+		<drawSize>(0.5,1)</drawSize>
+	</graphicData>
+	<altitudeLayer>Darkness</altitudeLayer>
+	<mote>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.10</solidTime>
+		<fadeOutTime>0</fadeOutTime>
+		<growthRate>-0.7</growthRate>
+		<collide>false</collide>
+		<speedPerTime>-22</speedPerTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+	</mote>
+</ThingDef>
+
+<EffecterDef>
+	<defName>VPE_Vein_Ability_MiasmaLost_EffecterSTNL</defName>
+	<children>
+		<!-- <li> -->
+		<!-- <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass> -->
+		<!-- <soundDef>Bridge_CollapseWater</soundDef> -->
+		<!-- </li> -->
+		<li>
+			<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+			<moteDef>VPE_Vein_Ability_MiasmaLost_Fleck_BlackSTNL</moteDef>
+			<burstCount>20</burstCount>
+			<speed>4.3~5.9</speed>
+			<scale>3</scale>
+		</li>
+		<li>
+			<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+			<moteDef>VPE_Vein_Ability_MiasmaLost_Fleck_BlackSTNL</moteDef>
+			<burstCount>6~8</burstCount>
+			<speed>4.3~5.9</speed>
+			<scale>1.3~1.6</scale>
+		</li>
+		<li>
+			<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+			<moteDef>VPE_Vein_Ability_MiasmaLost_Fleck_BlackSTNL</moteDef>
+			<burstCount>30</burstCount>
+			<speed>4.3~5.9</speed>
+			<scale>1.3~1.6</scale>
+		</li>
+	</children>
+</EffecterDef>
+
+<!-- Gaol Of The Mist Effecter -->
+
+<ThingDef ParentName="MoteBase">
+	<defName>VPE_Vein_Ability_MiasmaGaol_Fleck_RedSTNL</defName>
+	<graphicData>
+		<texPath>Things/Mote/Smoke</texPath>
+		<color>(255, 0, 0, 115)</color>
+	</graphicData>
+	<altitudeLayer>MoteOverhead</altitudeLayer>
+	<mote>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.03</solidTime>
+		<fadeOutTime>0.5</fadeOutTime>
+		<growthRate>-0.7</growthRate>
+		<collide>false</collide>
+		<speedPerTime>-22</speedPerTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+	</mote>
+</ThingDef>
+
+<ThingDef ParentName="MoteBase">
+	<defName>VPE_Vein_Ability_MiasmaGaol_Fleck_BlackSTNL</defName>
+	<graphicData>
+		<texPath>Things/Mote/Smoke</texPath>
+		<color>(0, 0, 0, 255)</color>
+		<drawSize>(0.5,1)</drawSize>
+	</graphicData>
+	<altitudeLayer>Darkness</altitudeLayer>
+	<mote>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.10</solidTime>
+		<fadeOutTime>5</fadeOutTime>
+		<growthRate>-0.7</growthRate>
+		<collide>false</collide>
+		<!-- <speedPerTime>-22</speedPerTime> -->
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+	</mote>
+</ThingDef>
+
+<EffecterDef>
+	<defName>VPE_Vein_Ability_MiasmaGaol_EffecterSTNL</defName>
+	<children>
+		<!-- <li> -->
+		<!-- <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass> -->
+		<!-- <soundDef>Bridge_CollapseWater</soundDef> -->
+		<!-- </li> -->
+		<li>
+			<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+			<moteDef>VPE_Vein_Ability_MiasmaGaol_Fleck_BlackSTNL</moteDef>
+			<burstCount>20</burstCount>
+			<speed>-10.3~-10.9</speed>
+			<scale>6</scale>
+		</li>
+		<li>
+			<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+			<moteDef>VPE_Vein_Ability_MiasmaGaol_Fleck_BlackSTNL</moteDef>
+			<burstCount>6~8</burstCount>
+			<speed>-10.3~-10.9</speed>
+			<scale>4.3~4.6</scale>
+		</li>
+		<li>
+			<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+			<moteDef>VPE_Vein_Ability_MiasmaGaol_Fleck_BlackSTNL</moteDef>
+			<burstCount>30</burstCount>
+			<speed>-10.3~-10.9</speed>
+			<scale>5.3~5.6</scale>
+		</li>
+	</children>
+</EffecterDef>
+
+<!-- Revenant death Effecter -->
+
+<EffecterDef>
+    <defName>VPE_Vein_RevenantLostDeathSTNL</defName>
+    <maintainTicks>400</maintainTicks>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>VPE_Vein_RevenantLostDeathParticlesSTNL</fleckDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <scale>1~2</scale>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <burstCount>8~10</burstCount>
+        <angle>0~360</angle>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <positionRadius>.5</positionRadius>
+        <positionRadiusMin>.5</positionRadiusMin>
+        <rotationRate>-600~600</rotationRate>
+        <rotation>0~360</rotation>
+        <speed>15~35</speed>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>MetalhorrorDeathFlash</fleckDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <scale>3</scale>
+        <angle>0</angle>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <positionRadius>0</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <rotationRate>0</rotationRate>
+        <rotation>0</rotation>
+        <speed>0</speed>
+      </li>
+    </children>
+  </EffecterDef>
+
+<FleckDef ParentName="FleckBase_RandomGraphic_Thrown">
+	<defName>VPE_Vein_RevenantLostDeathParticlesSTNL</defName>
+	<altitudeLayer>MoteOverhead</altitudeLayer>
+	<fadeInTime>0</fadeInTime>
+	<solidTime>2</solidTime>
+	<fadeOutTime>0</fadeOutTime>
+	<growthRate>-4</growthRate>
+	<speedPerTime>-150</speedPerTime>
+	<randomGraphics>
+		<li>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Things/Mote/MetalShardA</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(1, 1, 0)</color>
+			<drawSize>1</drawSize>
+		</li>
+		<li>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Things/Mote/MetalShardB</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(1, 1, 0)</color>
+			<drawSize>1</drawSize>
+		</li>
+	</randomGraphics>
+</FleckDef>
+
+
+<!-- <FleckDef ParentName="FleckBase_RandomGraphic"> -->
+	<!-- <defName>MetalhorrorDeathFlash</defName> -->
+	<!-- <altitudeLayer>MoteOverhead</altitudeLayer> -->
+	<!-- <fadeInTime>0</fadeInTime> -->
+	<!-- <solidTime>0</solidTime> -->
+	<!-- <fadeOutTime>1</fadeOutTime> -->
+	<!-- <randomGraphics> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareA</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareB</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareC</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+	<!-- </randomGraphics> -->
+<!-- </FleckDef> -->
+
+<!-- Blood weapon -->
+
+<EffecterDef>
+    <defName>VPE_Vein_BloodweaponHitEffectSTNL</defName>
+    <maintainTicks>400</maintainTicks>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>VPE_Vein_BloodWeaponHitEffectRedShardsSTNL</fleckDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <scale>1~2</scale>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <burstCount>8~10</burstCount>
+        <angle>0~360</angle>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <positionRadius>.5</positionRadius>
+        <positionRadiusMin>.5</positionRadiusMin>
+        <rotationRate>-600~600</rotationRate>
+        <rotation>0~360</rotation>
+        <speed>15~35</speed>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>MetalhorrorDeathFlash</fleckDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <scale>3</scale>
+        <angle>0</angle>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <positionRadius>0</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <rotationRate>0</rotationRate>
+        <rotation>0</rotation>
+        <speed>0</speed>
+      </li>
+    </children>
+  </EffecterDef>
+
+<FleckDef ParentName="FleckBase_RandomGraphic_Thrown">
+	<defName>VPE_Vein_BloodWeaponHitEffectRedShardsSTNL</defName>
+	<altitudeLayer>MoteOverhead</altitudeLayer>
+	<fadeInTime>0</fadeInTime>
+	<solidTime>2</solidTime>
+	<fadeOutTime>0</fadeOutTime>
+	<growthRate>-4</growthRate>
+	<speedPerTime>-150</speedPerTime>
+	<randomGraphics>
+		<li>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Things/Mote/MetalShardA</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(1, 0, 0)</color>
+			<drawSize>1</drawSize>
+		</li>
+		<li>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Things/Mote/MetalShardB</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(1, 0, 0)</color>
+			<drawSize>1</drawSize>
+		</li>
+	</randomGraphics>
+</FleckDef>
+
+
+<!-- <FleckDef ParentName="FleckBase_RandomGraphic"> -->
+	<!-- <defName>MetalhorrorDeathFlash</defName> -->
+	<!-- <altitudeLayer>MoteOverhead</altitudeLayer> -->
+	<!-- <fadeInTime>0</fadeInTime> -->
+	<!-- <solidTime>0</solidTime> -->
+	<!-- <fadeOutTime>1</fadeOutTime> -->
+	<!-- <randomGraphics> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareA</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareB</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareC</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+	<!-- </randomGraphics> -->
+<!-- </FleckDef> -->
+
+<!-- Great Collapse Effecter -->
+
+<EffecterDef>
+    <defName>VPE_Vein_GreatCollapse_EffecterSTNL</defName>
+    <maintainTicks>400</maintainTicks>
+    <children>
+      <!-- <li> -->
+        <!-- <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass> -->
+        <!-- <fleckDef>VPE_Vein_GreatCollapse_Hole_STNL</fleckDef> -->
+        <!-- <spawnLocType>OnSource</spawnLocType> -->
+        <!-- <scale>1</scale> -->
+        <!-- <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity> -->
+        <!-- <burstCount>1</burstCount> -->
+        <!-- <angle>0</angle> -->
+        <!-- <positionOffset>(0, 0, 0)</positionOffset> -->
+        <!-- <positionRadius>0</positionRadius> -->
+        <!-- <positionRadiusMin>0</positionRadiusMin> -->
+        <!-- <rotationRate>0</rotationRate> -->
+        <!-- <rotation>0</rotation> -->
+        <!-- <speed>0</speed> -->
+      <!-- </li> -->
+		<li>
+			<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+			<moteDef>VPE_Vein_Ability_MiasmaGaol_Fleck_BlackSTNL</moteDef>
+			<burstCount>30</burstCount>
+			<speed>-10.3~-10.9</speed>
+			<scale>2</scale>
+		</li>
+    </children>
+  </EffecterDef>
+
+<FleckDef ParentName="FleckBase_RandomGraphic_Thrown">
+	<defName>VPE_Vein_GreatCollapse_Hole_STNL</defName>
+	<altitudeLayer>Terrain</altitudeLayer>
+	<fadeInTime>0</fadeInTime>
+	<solidTime>3</solidTime>
+	<fadeOutTime>2.5</fadeOutTime>
+	<growthRate>0</growthRate>
+	<speedPerTime>0</speedPerTime>
+	<randomGraphics>
+		<li>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Things/Building/PitGate/PitGate</texPath>
+			<shaderType>Mote</shaderType>
+			<color>(1, 1, 1)</color>
+			<drawSize>3</drawSize>
+		</li>
+	</randomGraphics>
+</FleckDef>
+
+
+<!-- <FleckDef ParentName="FleckBase_RandomGraphic"> -->
+	<!-- <defName>MetalhorrorDeathFlash</defName> -->
+	<!-- <altitudeLayer>MoteOverhead</altitudeLayer> -->
+	<!-- <fadeInTime>0</fadeInTime> -->
+	<!-- <solidTime>0</solidTime> -->
+	<!-- <fadeOutTime>1</fadeOutTime> -->
+	<!-- <randomGraphics> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareA</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareB</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+		<!-- <li> -->
+			<!-- <graphicClass>Graphic_Fleck</graphicClass> -->
+			<!-- <texPath>Things/Mote/LensFlares/LensFlareC</texPath> -->
+			<!-- <shaderType>MoteGlow</shaderType> -->
+			<!-- <color>(0.32, 0.35, 0.33, .75)</color> -->
+			<!-- <drawSize>4</drawSize> -->
+		<!-- </li> -->
+	<!-- </randomGraphics> -->
+<!-- </FleckDef> -->
+</Defs>

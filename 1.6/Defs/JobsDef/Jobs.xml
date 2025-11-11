@@ -1,0 +1,8 @@
+<Defs>
+  <JobDef>
+    <defName>VPE_VeinIngestBloodSTNL</defName>
+    <driverClass>VPE_Vein.JobDriver_ConsumeBlood</driverClass>
+    <reportString>consuming TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

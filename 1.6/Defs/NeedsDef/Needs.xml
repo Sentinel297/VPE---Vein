@@ -1,0 +1,20 @@
+<Defs>
+
+  <NeedDef>
+    <defName>VPE_Vein_BloodNeedSTNL</defName>
+    <needClass>VPE_Vein.BloodNeed</needClass>
+    <label>Blood</label>
+    <description>Human blood used to stabilize the BOR parasite present within this creature, This creature will frenzy and turn into a feral Lost if this need hits 0%.</description>
+    <minIntelligence>Humanlike</minIntelligence>
+    <colonistsOnly>false</colonistsOnly>
+    <neverOnPrisoner>false</neverOnPrisoner>
+    <neverOnSlave>false</neverOnSlave>
+    <listPriority>500</listPriority>
+    <major>true</major>
+    <freezeWhileSleeping>false</freezeWhileSleeping>
+    <freezeInMentalState>false</freezeInMentalState>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+	<onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+  </NeedDef>
+  
+</Defs>

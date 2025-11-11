@@ -1,0 +1,19 @@
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="IngestedHemogenPack"]/nullifyingHediffs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="IngestedHemogenPack"]</xpath>
+			<value>
+				<nullifyingHediffs/>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="IngestedHemogenPack"]/nullifyingHediffs</xpath>
+		<value>
+			<li>VPE_Vein_Revenant_BaseSTNL</li>
+			<li>VPE_Vein_Revenant_VoidTypeSTNL</li>
+		</value>
+	</Operation>
+</Patch>

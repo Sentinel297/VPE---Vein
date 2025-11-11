@@ -1,0 +1,87 @@
+<Defs>
+  
+  <RecipeDef Name="VPE_VeinRecipeBaseSTNL" ParentName="SurgeryFlesh" Abstract="True">
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+	</RecipeDef>
+
+<RecipeDef ParentName="VPE_VeinRecipeBaseSTNL">
+	<defName>VPE_VeinImplantHemogenSTNL</defName>
+	<label>administer hemogen pack (Revenant Blood Need)</label>
+	<description>Administer an hemogen pack.</description>
+	<workerClass>VPE_Vein.Surgery_RefillBloodNeed</workerClass>
+	<jobString>Administering Blood.</jobString>
+	<targetsBodyPart>false</targetsBodyPart>
+	<anesthetize>false</anesthetize>
+	<workAmount>600</workAmount>
+	<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+	<surgeryOutcomeEffect IsNull="False"/>
+	<humanlikeOnly>false</humanlikeOnly>
+	<modExtensions>
+		<li Class="VPE_Vein.Vein_RefillBloodSurgeryExt">
+			<EligibleHediffs>
+				<li>VPE_Vein_Revenant_BaseSTNL</li>
+				<li>VPE_Vein_Revenant_VoidTypeSTNL</li>
+				<li>VPE_Vein_Revenant_Queen_STNL</li>
+				<li>VPE_Vein_Lost_BaseSTNL</li>
+			</EligibleHediffs>
+		</li>
+	</modExtensions>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>HemogenPack</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>HemogenPack</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+</RecipeDef>
+  
+<RecipeDef ParentName="VPE_VeinRecipeBaseSTNL">
+	<defName>VPE_VeinImplantBloodBeadSTNL</defName>
+	<label>administer Blood Bead (Revenant Blood Need)</label>
+	<description>Administer a blood bead.</description>
+	<workerClass>VPE_Vein.Surgery_RefillBloodNeed</workerClass>
+	<jobString>Administering Blood.</jobString>
+	<targetsBodyPart>false</targetsBodyPart>
+	<anesthetize>false</anesthetize>
+	<workAmount>600</workAmount>
+	<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+	<surgeryOutcomeEffect IsNull="False"/>
+	<humanlikeOnly>false</humanlikeOnly>
+	<modExtensions>
+		<li Class="VPE_Vein.Vein_RefillBloodSurgeryExt">
+			<EligibleHediffs>
+				<li>VPE_Vein_Revenant_BaseSTNL</li>
+				<li>VPE_Vein_Revenant_VoidTypeSTNL</li>
+				<li>VPE_Vein_Revenant_Queen_STNL</li>
+				<li>VPE_Vein_Lost_BaseSTNL</li>
+			</EligibleHediffs>
+		</li>
+	</modExtensions>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>VPE_Vein_BloodBeadSTNL</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>VPE_Vein_BloodBeadSTNL</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+</RecipeDef>
+ 
+</Defs>

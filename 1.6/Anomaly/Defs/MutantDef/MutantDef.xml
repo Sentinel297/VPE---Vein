@@ -1,0 +1,342 @@
+<Defs>
+	<MutantDef Name="ParentLostDefSTNL" ParentName="BaseMutantEntity">
+		<defName>VPE_Vein_LostSTNL</defName>
+		<label>Lost</label>
+		<description>The Lost are Revenants who have turned into dark, malevolent monsters by succumbing to their blood lust and losing their humanity. In order to escape from the suffering of their never-ending thirst for blood, they forever wander the world in search of new blood.</description>
+		<hediff>VPE_Vein_Lost_BaseSTNL</hediff>
+		<thinkTree>Ghoul</thinkTree>
+		<thinkTreeConstant>GhoulConstant</thinkTreeConstant>
+		<!-- <canBeDrafted>true</canBeDrafted> -->
+		<respectsAllowedArea>true</respectsAllowedArea>
+		<showJobReport>true</showJobReport>
+		<disableApparel>false</disableApparel>
+		<whitelistedFloatMenuProviders>
+			<li>FloatMenuOptionProvider_DraftedAttack</li>
+			<li>FloatMenuOptionProvider_DraftedMove</li>
+			<li>FloatMenuOptionProvider_Ingest</li>
+			<li>FloatMenuOptionProvider_GhoulRest</li>
+			<li>FloatMenuOptionProvider_EnterMapPortal</li>
+		</whitelistedFloatMenuProviders>
+		<!-- <relativeTurnedThought>BecameGhoul</relativeTurnedThought> -->
+		<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+		<needWhitelist>
+			<li>Food</li>
+			<li>VPE_Vein_BloodNeedSTNL</li>
+		</needWhitelist>
+		<!-- <overrideFoodType>true</overrideFoodType> -->
+		<!-- <foodType>CarnivoreAnimalStrict</foodType> -->
+		<allowEatingCorpses>true</allowEatingCorpses>
+		<deathOnDownedChance>0</deathOnDownedChance>
+		<removePermanentInjuries>true</removePermanentInjuries>
+		<canUseDrugs>true</canUseDrugs>
+		<!-- <drugWhitelist> -->
+			<!-- <li>VoidsightSerum</li> -->
+			<!-- <li>MetalbloodSerum</li> -->
+			<!-- <li>JuggernautSerum</li> -->
+			<!-- <li>MindNumbSerum</li> -->
+			<!-- <li>GhoulResurrectionSerum</li> -->
+		<!-- </drugWhitelist> -->
+		<givesHediffs>
+			<li>
+				<def>Regeneration</def>
+				<severity>0.1</severity>
+			</li>
+		</givesHediffs>
+		<disablesGenes>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Furskin</li>
+		</disablesGenes>
+		<!-- <abilityWhitelist> -->
+		<!-- <li>GhoulFrenzy</li> -->
+		<!-- <li>CorrosiveSpray</li> -->
+		<!-- <li>MetalbloodInjection</li> -->
+		<!-- </abilityWhitelist> -->
+		<deathLetter>One of your losts has died.</deathLetter>
+		<deathLetterExtra>Unlike regular colonists, losts do not need to be buried and their death will not upset others. You may choose to bury them should you wish.</deathLetterExtra>
+		<!-- Sounds -->
+		<soundAttackChance>0.25</soundAttackChance>
+		<soundCall>Pawn_Ghoul_Call</soundCall>
+		<soundAttack>Pawn_Ghoul_Attack</soundAttack>
+		<soundWounded>Pawn_Ghoul_Pain</soundWounded>
+		<soundDeath>Pawn_Ghoul_Killed</soundDeath>
+		<!-- Rendering -->
+		<skinColorOverride>(0.35, 0.35, 0.35)</skinColorOverride>
+		<bodyTypeGraphicPaths>
+			<Male>Things/Pawn/Ghoul/Bodies/Ghoulskin_Male</Male>
+			<Female>Things/Pawn/Ghoul/Bodies/Ghoulskin_Female</Female>
+			<Hulk>Things/Pawn/Ghoul/Bodies/Ghoulskin_Hulk</Hulk>
+			<Fat>Things/Pawn/Ghoul/Bodies/Ghoulskin_Fat</Fat>
+			<Thin>Things/Pawn/Ghoul/Bodies/Ghoulskin_Thin</Thin>
+		</bodyTypeGraphicPaths>
+		<forcedHeadTypes>
+			<li>Ghoul_Normal</li>
+			<li>Ghoul_Heavy</li>
+			<li>Ghoul_Narrow</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Ghoul_Wide</li>
+		</forcedHeadTypes>
+		<!-- <hairTagFilter> -->
+			<!-- <whitelist>true</whitelist> -->
+			<!-- <tags> -->
+				<!-- <li>Ghoul</li> -->
+			<!-- </tags> -->
+		<!-- </hairTagFilter> -->
+		<!-- <beardTagFilter> -->
+			<!-- <whitelist>true</whitelist> -->
+			<!-- <tags> -->
+				<!-- <li>NoBeard</li> -->
+			<!-- </tags> -->
+		<!-- </beardTagFilter> -->
+		<tools>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+			</li>
+			<li>
+				<label>left claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>7.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<chanceFactor>1.5</chanceFactor>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+				<soundMeleeHit>Pawn_Ghoul_Scratch</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			</li>
+			<li>
+				<label>right claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>7.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<chanceFactor>1.5</chanceFactor>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+				<soundMeleeHit>Pawn_Ghoul_Scratch</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			</li>
+		</tools>
+		<hediffGivers>
+			<li Class="HediffGiver_MeatHunger">
+				<hediff>MeatHunger</hediff>
+			</li>
+		</hediffGivers>
+	</MutantDef>
+	
+	<MutantDef ParentName="ParentLostDefSTNL">
+		<defName>VPE_Vein_Lost_NonDraftableSTNL</defName>
+		<label>Lost</label>
+		<description>The Lost are Revenants who have turned into dark, malevolent monsters by succumbing to their blood lust and losing their humanity. In order to escape from the suffering of their never-ending thirst for blood, they forever wander the world in search of new blood.</description>
+		<hediff>VPE_Vein_Lost_BaseSTNL</hediff>
+		<canBeDrafted>false</canBeDrafted>
+	</MutantDef>
+	
+	
+<MutantDef Abstract="True" Name="VPE_Vein_AwakenedLostBaseSTNL">
+	<!-- <workDisables> -->
+	<!-- <li>AllWork</li> -->
+	<!-- <li>Shooting</li> -->
+	<!-- </workDisables> -->
+	<consideredSubhuman>false</consideredSubhuman>
+	<canCarryPawns>true</canCarryPawns>
+	<canTend>true</canTend>
+	<!-- <whitelistedFloatMenuProviders/> -->
+	<preventsMentalBreaks>true</preventsMentalBreaks>
+	<disablesIdeo>true</disablesIdeo>
+	<disableOwnership>false</disableOwnership>
+	<disablePolicies>false</disablePolicies>
+	<disableTitles>true</disableTitles>
+	<disableNeeds>true</disableNeeds>
+	<disableEatingAtTable>true</disableEatingAtTable>
+	<incapableOfSocialInteractions>true</incapableOfSocialInteractions>
+	<canBeCapturedToHoldingPlatform>true</canBeCapturedToHoldingPlatform>
+	<producesBioferrite>true</producesBioferrite>
+	<overrideLabel>true</overrideLabel>
+	<overrideInspectString>true</overrideInspectString>
+	<canBleed>true</canBleed>
+	<terminatePregnancy>true</terminatePregnancy>
+	<isImmuneToInfections>true</isImmuneToInfections>
+	<removeChronicIllnesses>true</removeChronicIllnesses>
+	<removeAddictions>true</removeAddictions>
+	<disableAging>true</disableAging>
+	<clearsEgo>true</clearsEgo>
+	<partsCleanAndDroppable>false</partsCleanAndDroppable>
+	<breathesAir>false</breathesAir>
+	<removesHediffs>
+		<li>CryptosleepSickness</li>
+		<li>LuciferiumHigh</li>
+		<li>LuciferiumAddiction</li>
+		<li>Scaria</li>
+		<li>CorpseTorment</li>
+		<li>CubeInterest</li>
+		<li>CubeWithdrawal</li>
+		<li>CubeComa</li>
+		<li>CubeRage</li>
+		<li>HeartAttack</li>
+		<li>Scaria</li>
+		<li MayRequire="Ludeon.RimWorld.Royalty">PsychicAmplifier</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">MechlinkImplant</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">PregnantHuman</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">PregnancyLabor</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">HemogenAmplified</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">DeathrestExhaustion</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">InterruptedDeathrest</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">HemogenCraving</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">Deathrest</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">RegenerationComa</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">PostpartumExhaustion</li>
+		<li>Inhumanized</li>
+	</removesHediffs>
+	<disablesGenes>
+		<li MayRequire="Ludeon.RimWorld.Biotech">Hemogenic</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">Deathrest</li>
+	</disablesGenes>
+</MutantDef>
+	
+	
+<MutantDef ParentName="VPE_Vein_AwakenedLostBaseSTNL">
+	<defName>VPE_Vein_AwakenedLostSTNL</defName>
+	<label>Awakened Lost</label>
+	<description>The Lost are Revenants who have turned into dark, malevolent monsters by succumbing to their blood lust and losing their humanity. In order to escape from the suffering of their never-ending thirst for blood, they forever wander the world in search of new blood.</description>
+	<hediff>VPE_Vein_Lost_BaseSTNL</hediff>
+	<thinkTree>Humanlike</thinkTree>
+	<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+	<!-- <canBeDrafted>true</canBeDrafted> -->
+	<respectsAllowedArea>true</respectsAllowedArea>
+	<showJobReport>true</showJobReport>
+	<disableApparel>false</disableApparel>
+	<!-- <whitelistedFloatMenuProviders> -->
+		<!-- <li>FloatMenuOptionProvider_DraftedAttack</li> -->
+		<!-- <li>FloatMenuOptionProvider_DraftedMove</li> -->
+		<!-- <li>FloatMenuOptionProvider_Ingest</li> -->
+		<!-- <li>FloatMenuOptionProvider_GhoulRest</li> -->
+		<!-- <li>FloatMenuOptionProvider_EnterMapPortal</li> -->
+	<!-- </whitelistedFloatMenuProviders> -->
+	<!-- <relativeTurnedThought>BecameGhoul</relativeTurnedThought> -->
+	<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+	<needWhitelist>
+		<li>Food</li>
+		<li>VPE_Vein_BloodNeedSTNL</li>
+	</needWhitelist>
+	<overrideFoodType>true</overrideFoodType>
+	<foodType>CarnivoreAnimalStrict</foodType>
+	<allowEatingCorpses>true</allowEatingCorpses>
+	<deathOnDownedChance>0</deathOnDownedChance>
+	<removePermanentInjuries>true</removePermanentInjuries>
+	<canUseDrugs>true</canUseDrugs>
+	<!-- <drugWhitelist> -->
+	<!-- <li>VoidsightSerum</li> -->
+	<!-- <li>MetalbloodSerum</li> -->
+	<!-- <li>JuggernautSerum</li> -->
+	<!-- <li>MindNumbSerum</li> -->
+	<!-- <li>GhoulResurrectionSerum</li> -->
+	<!-- </drugWhitelist> -->
+	<givesHediffs>
+		<li>
+			<def>Regeneration</def>
+			<severity>0.1</severity>
+		</li>
+	</givesHediffs>
+	<disablesGenes>
+		<li MayRequire="Ludeon.RimWorld.Biotech">Furskin</li>
+	</disablesGenes>
+	<!-- <abilityWhitelist> -->
+	<!-- <li>GhoulFrenzy</li> -->
+	<!-- <li>CorrosiveSpray</li> -->
+	<!-- <li>MetalbloodInjection</li> -->
+	<!-- </abilityWhitelist> -->
+	<deathLetter>One of your losts has died.</deathLetter>
+	<deathLetterExtra>Unlike regular colonists, losts do not need to be buried and their death will not upset others. You may choose to bury them should you wish.</deathLetterExtra>
+	<!-- Sounds -->
+	<soundAttackChance>0.25</soundAttackChance>
+	<soundCall>Pawn_Ghoul_Call</soundCall>
+	<soundAttack>Pawn_Ghoul_Attack</soundAttack>
+	<soundWounded>Pawn_Ghoul_Pain</soundWounded>
+	<soundDeath>Pawn_Ghoul_Killed</soundDeath>
+	<!-- Rendering -->
+	<skinColorOverride>(0.35, 0.35, 0.35)</skinColorOverride>
+	<bodyTypeGraphicPaths>
+		<Male>Things/Pawn/Ghoul/Bodies/Ghoulskin_Male</Male>
+		<Female>Things/Pawn/Ghoul/Bodies/Ghoulskin_Female</Female>
+		<Hulk>Things/Pawn/Ghoul/Bodies/Ghoulskin_Hulk</Hulk>
+		<Fat>Things/Pawn/Ghoul/Bodies/Ghoulskin_Fat</Fat>
+		<Thin>Things/Pawn/Ghoul/Bodies/Ghoulskin_Thin</Thin>
+	</bodyTypeGraphicPaths>
+	<forcedHeadTypes>
+		<li>Ghoul_Normal</li>
+		<li>Ghoul_Heavy</li>
+		<li>Ghoul_Narrow</li>
+		<li MayRequire="Ludeon.RimWorld.Biotech">Ghoul_Wide</li>
+	</forcedHeadTypes>
+	<!-- <hairTagFilter> -->
+	<!-- <whitelist>true</whitelist> -->
+	<!-- <tags> -->
+	<!-- <li>Ghoul</li> -->
+	<!-- </tags> -->
+	<!-- </hairTagFilter> -->
+	<!-- <beardTagFilter> -->
+	<!-- <whitelist>true</whitelist> -->
+	<!-- <tags> -->
+	<!-- <li>NoBeard</li> -->
+	<!-- </tags> -->
+	<!-- </beardTagFilter> -->
+	<tools>
+		<li>
+			<label>teeth</label>
+			<capacities>
+				<li>Bite</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.5</chanceFactor>
+			<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+			<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+		</li>
+		<li>
+			<label>left claw</label>
+			<labelNoLocation>claw</labelNoLocation>
+			<capacities>
+				<li>Scratch</li>
+			</capacities>
+			<power>7.0</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<chanceFactor>1.5</chanceFactor>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			<soundMeleeHit>Pawn_Ghoul_Scratch</soundMeleeHit>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</li>
+		<li>
+			<label>right claw</label>
+			<labelNoLocation>claw</labelNoLocation>
+			<capacities>
+				<li>Scratch</li>
+			</capacities>
+			<power>7.0</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<chanceFactor>1.5</chanceFactor>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			<soundMeleeHit>Pawn_Ghoul_Scratch</soundMeleeHit>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</li>
+	</tools>
+	<hediffGivers>
+		<li Class="HediffGiver_MeatHunger">
+			<hediff>MeatHunger</hediff>
+		</li>
+	</hediffGivers>
+</MutantDef>
+</Defs>

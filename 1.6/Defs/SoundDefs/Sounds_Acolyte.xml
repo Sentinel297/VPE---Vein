@@ -1,0 +1,18 @@
+<Defs>
+<!-- <SoundDef> -->
+	<!-- <defName>VPE_Acolyte_Heal_CastSTNL</defName> -->
+	<!-- <context>MapOnly</context> -->
+	<!-- <maxSimultaneous>1</maxSimultaneous> -->
+	<!-- <subSounds> -->
+		<!-- <li> -->
+			<!-- <grains> -->
+				<!-- <li Class="AudioGrain_Clip"> -->
+					<!-- <clipPath>VPE_RagnarokSTNL/Acolyte/Heal_heal_effect</clipPath> -->
+				<!-- </li> -->
+			<!-- </grains> -->
+			<!-- <volumeRange>42</volumeRange> -->
+			<!-- <distRange>20~50</distRange> -->
+		<!-- </li> -->
+	<!-- </subSounds> -->
+<!-- </SoundDef> -->
+</Defs>

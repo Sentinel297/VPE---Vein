@@ -1,0 +1,161 @@
+<Defs>
+<ThingDef ParentName="BuildingBase">
+	<defName>VPE_Vein_BloodSpringSTNL</defName>
+	<label>Blood Spring</label>
+	<description>Slowly generates blood beads to feed Revenants and Losts.</description>
+	<thingClass>Building</thingClass>
+	<graphicData>
+		<texPath>UI_VeinSTNL/Things/BloodSpring/BloodSpring</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(3, 3)</drawSize>
+		<drawOffset>(0, -0.5, 0.5)</drawOffset>
+		<shadowData>
+			<volume>(0.3,0.5,0.7)</volume>
+			<offset>(0,0,0)</offset>
+		</shadowData>
+	</graphicData>
+	<!-- <thingCategories> -->
+	<!-- <li>BuildingsSpecial</li> -->
+	<!-- </thingCategories> -->
+	<costList>
+</costList>
+	<!-- <building> -->
+	<!-- <destroySound>BuildingDestroyed_Metal_Big</destroySound> -->
+	<!-- </building> -->
+	<comps>
+		<li Class="CompProperties_Spawner">
+			<requiresPower>false</requiresPower>
+			<thingToSpawn>VPE_Vein_BloodBeadSTNL</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>
+				<min>300000</min>
+				<max>300000</max>
+			</spawnIntervalRange>
+			<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+			<showMessageIfOwned>true</showMessageIfOwned>
+		</li>
+	</comps>
+	<altitudeLayer>Building</altitudeLayer>
+	<statBases>
+		<MarketValue>250</MarketValue>
+		<MaxHitPoints>200</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<Beauty>0</Beauty>
+		<Mass>35</Mass>
+		<WorkToBuild>1000</WorkToBuild>
+	</statBases>
+	<tickerType>Normal</tickerType>
+	<size>(1, 1)</size>
+	<fillPercent>0.6</fillPercent>
+	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	<passability>PassThroughOnly</passability>
+	<blockWind>true</blockWind>
+	<rotatable>false</rotatable>
+	<canOverlapZones>false</canOverlapZones>
+	<!-- <minifiedDef>MinifiedThing</minifiedDef> -->
+	<tradeability>Sellable</tradeability>
+</ThingDef>
+
+<!-- Mistle -->
+
+<ThingDef ParentName="BuildingBase">
+	<defName>VPE_Vein_MistleSTNL</defName>
+	<label>Mistle</label>
+	<description>A mistle capable of repelling miasma, it will increase the toxic environment resistance of nearby Revenants.\n\nFallen Revenants will reform near mistles.</description>
+	<thingClass>VPE_Vein.ThingComp_Mistle</thingClass>
+	<graphicData>
+		<texPath>UI_VeinSTNL/Things/Mistle/Mistle</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(1.25, 1.25)</drawSize>
+		<drawOffset>(0, -0.5, 0)</drawOffset>
+		<shadowData>
+			<volume>(0.2, 0, 0.5)</volume>
+			<offset>(0,0,0)</offset>
+		</shadowData>
+	</graphicData>
+	<thingCategories>
+		<li>BuildingsSpecial</li>
+	</thingCategories>
+	<costList>
+</costList>
+	<!-- <building> -->
+	<!-- <destroySound>BuildingDestroyed_Metal_Big</destroySound> -->
+	<!-- </building> -->
+	<!-- <comps> -->
+		<!-- <li Class="CompProperties_Spawner"> -->
+			<!-- <requiresPower>false</requiresPower> -->
+			<!-- <thingToSpawn>VPE_Vein_BloodBeadSTNL</thingToSpawn> -->
+			<!-- <spawnCount>1</spawnCount> -->
+			<!-- <spawnIntervalRange> -->
+				<!-- <min>60000</min> -->
+				<!-- <max>60000</max> -->
+			<!-- </spawnIntervalRange> -->
+			<!-- <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn> -->
+			<!-- <showMessageIfOwned>true</showMessageIfOwned> -->
+		<!-- </li> -->
+	<!-- </comps> -->
+	<altitudeLayer>Building</altitudeLayer>
+	<statBases>
+		<MarketValue>20</MarketValue>
+		<MaxHitPoints>50</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<Beauty>0</Beauty>
+		<Mass>5</Mass>
+		<WorkToBuild>1000</WorkToBuild>
+	</statBases>
+	<tickerType>Normal</tickerType>
+	<size>(1, 1)</size>
+	<fillPercent>0.2</fillPercent>
+	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	<passability>PassThroughOnly</passability>
+	<blockWind>true</blockWind>
+	<rotatable>false</rotatable>
+	<canOverlapZones>false</canOverlapZones>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<tradeability>Sellable</tradeability>
+</ThingDef>
+
+
+<!-- Great Collapse Hole -->
+
+<ThingDef ParentName="BuildingBase">
+	<defName>VPE_Vein_GreatCollapse_HoleSTNL</defName>
+	<label>Ground Rift</label>
+	<description>A massive, foreboding hole that connects the surface with a dark network of underground caves.\nA large thorn is allowing Losts from the deep to ascend towards the surface.</description>
+	<size>(5,5)</size>
+	<useHitPoints>false</useHitPoints>
+	<thingClass>VPE_Vein.LostSpawner</thingClass>
+	<tickerType>Normal</tickerType>
+	<rotatable>false</rotatable>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	<canOverlapZones>false</canOverlapZones>
+	<graphicData>
+		<graphicClass>Graphic_Single</graphicClass>
+		<texPath>UI_VeinSTNL/Things/Thorn/QueenThorn</texPath>
+		<drawSize>(5,5)</drawSize>
+	</graphicData>
+	<altitudeLayer>FloorEmplacement</altitudeLayer>
+	<passability>Impassable</passability>
+	<holdsRoof>true</holdsRoof>
+	<destroyable>true</destroyable>
+	<building>
+		<isEdifice>true</isEdifice>
+		<deconstructible>false</deconstructible>
+		<isTargetable>false</isTargetable>
+		<isInert>true</isInert>
+		<claimable>false</claimable>
+		<expandHomeArea>false</expandHomeArea>
+	</building>
+	<statBases>
+		<Flammability>0</Flammability>
+	</statBases>
+	<comps>
+		<li Class="CompProperties_LeaveFilthOnDestroyed">
+			<filthDef>Filth_LooseGround</filthDef>
+			<thickness>5</thickness>
+		</li>
+	</comps>
+</ThingDef>
+</Defs>

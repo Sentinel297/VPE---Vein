@@ -1,0 +1,106 @@
+<Defs>
+<ThingDef>
+	<defName>VPE_Vein_BloodBeadSTNL</defName>
+	<label>Blood Bead</label>
+	<description>A Blood Bead is a fruit-like bead grown from bloodsprings around the world. Blood Beads contain blood- which can be use as a substitute for human blood that can quench a Revenant's bloodthirst. Large specimens are stated to keep an adult revenant healthy for two months, but with many of the springs drying up, there aren’t many left found like this.\n\nA blood bead will fully restore the need for blood of a revenant/lost.</description>
+	<category>Item</category>
+	<thingClass>ThingWithComps</thingClass>
+	<drawerType>MapMeshOnly</drawerType>
+	<useHitPoints>true</useHitPoints>
+	<healthAffectsPrice>false</healthAffectsPrice>
+	<selectable>true</selectable>
+	<stackLimit>10</stackLimit>
+	<tickerType>Rare</tickerType>
+	<possessionCount>5</possessionCount>
+	<socialPropernessMatters>true</socialPropernessMatters>
+	<alwaysHaulable>true</alwaysHaulable>
+	<pathCost>14</pathCost>
+	<allowedArchonexusCount>-1</allowedArchonexusCount>
+	<resourceReadoutPriority>Last</resourceReadoutPriority>
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<graphicData>
+		<texPath>UI_VeinSTNL/Things/BloodBead</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+		<drawSize>0.85</drawSize>
+	</graphicData>
+	<statBases>
+		<MaxHitPoints>60</MaxHitPoints>
+		<DeteriorationRate>5</DeteriorationRate>
+		<Mass>0.50</Mass>
+		<Flammability>0</Flammability>
+		<Nutrition>100</Nutrition>
+		<Beauty>0</Beauty>
+		<MarketValue>5</MarketValue>
+	</statBases>
+	<thingCategories>
+		<li>Foods</li>
+	</thingCategories>
+	<ingestible>
+		<foodType>Fluid</foodType>
+		<preferability>DesperateOnly</preferability>
+		<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+		<!-- <specialThoughtDirect>IngestedBloodBeadSTNL</specialThoughtDirect> -->
+		<ingestSound>HemogenPack_Consume</ingestSound>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_OffsetHemogen">
+				<offset>1</offset>
+			</li>
+		</outcomeDoers>
+	</ingestible>
+	<comps>
+		<li Class="CompProperties_Forbiddable"/>
+		<!-- <li Class="VPE_Bloodcode.CompProperties_RestoreNeed"> -->
+			<!-- <amount>1</amount> -->
+		<!-- </li> -->
+	</comps>
+</ThingDef>
+
+
+	<ThingDef>
+		<defName>VPE_Vein_VestigeSTNL</defName>
+		<label>Vestige</label>
+		<description>A vestige that contains the memories of a fallen revenant, a Void-type revenant may use this vestige to raise all of their skills by some points.</description>
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<drawerType>MapMeshOnly</drawerType>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<selectable>true</selectable>
+		<stackLimit>1</stackLimit>
+		<tickerType>Rare</tickerType>
+		<possessionCount>5</possessionCount>
+		<alwaysHaulable>true</alwaysHaulable>
+		<pathCost>14</pathCost>
+		<allowedArchonexusCount>5</allowedArchonexusCount>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<graphicData>
+			<texPath>UI_VeinSTNL/Things/Vestige/Vestige</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Mass>0.50</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>5</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use {0_label}</useLabel>
+				<useDuration>600</useDuration>
+				<showUseGizmo>true</showUseGizmo>
+			</li>
+			<li Class="CompProperties_UseEffectPlaySound">
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="VPE_Vein.CompProperties_UseEffectVestige"/>
+		</comps>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<!-- Vein -->
+
+<VanillaPsycastsExpanded.PsycasterPathDef>
+	<defName>VPE_Vein_Dweller_STNL</defName>
+	<label>Dweller In The Dark</label>
+	<description>In the face of certain death, we rise! Embrace the power of the BOR Parasite and embody bloody evolution.</description>
+	<background>UI_VeinSTNL/Tree/DwellerTreeBase</background>
+	<altBackground>UI_VeinSTNL/Tree/DwellerTreeBase</altBackground>
+	<tab>Blood Codes</tab>
+	<tooltip>In the face of certain death, we rise! Embrace the power of the BOR Parasite and embody bloody evolution.</tooltip>
+</VanillaPsycastsExpanded.PsycasterPathDef>
+
+</Defs>

@@ -1,0 +1,41 @@
+<LanguageData>
+<NoHeartForRevenantLostResurrectionSTNL>{0}'s heart was missing when {1} died, no resurrection will happen.</NoHeartForRevenantLostResurrectionSTNL>
+<VPE_Vein_EndRedMistComa_Label_STNL>Dispel Red Mist</VPE_Vein_EndRedMistComa_Label_STNL>
+
+<VPE_Vein_SelectDrainTypeSTNL>Select A Thing To Drain:</VPE_Vein_SelectDrainTypeSTNL>
+<VPE_Vein_DrainGenesSTNL>Drain A Random Gene</VPE_Vein_DrainGenesSTNL>
+<VPE_Vein_DrainSkillsSTNL>Drain Highest Skill</VPE_Vein_DrainSkillsSTNL>
+<VPE_Vein_DrainAbilitiesSTNL>Drain A Random Ability</VPE_Vein_DrainAbilitiesSTNL>
+<VPE_Vein_DrainBloodSTNL>Only Drain Blood (40%)</VPE_Vein_DrainBloodSTNL>
+<VPE_Vein_DrainAttack_SpecialAbilityAvailable_STNL>Special Drain Available:{0}{1}</VPE_Vein_DrainAttack_SpecialAbilityAvailable_STNL>
+
+<VPE_Vein_NoMoreBloodInTarget>{0} doesn't have any more blood to drain.</VPE_Vein_NoMoreBloodInTarget>
+<VPE_Vein_DrainAttackNoGenesSTNL>{0} doesn't have a gene to copy.</VPE_Vein_DrainAttackNoGenesSTNL>
+<VPE_Vein_ChooseRandomGeneSTNL>Choose A Random Gene:</VPE_Vein_ChooseRandomGeneSTNL>
+<VPE_Vein_WindowChooseAbilities_STNL>Choose A Random Ability:</VPE_Vein_WindowChooseAbilities_STNL>
+<VPE_Vein_DrainAttackNoSkillSTNL>{0} doesn't have a skill to drain.</VPE_Vein_DrainAttackNoSkillSTNL>
+<VPE_Vein_DrainAttackNoAbilitiesToCopySTNL>{0} either doesn't have any abilities or {1} already has the same skills as {0}.</VPE_Vein_DrainAttackNoAbilitiesToCopySTNL>
+
+<VPE_VestigeAppearedFromDeath_STNL>{0} has died, a vestige containing {1} memories has appeared where {2} died.</VPE_VestigeAppearedFromDeath_STNL>
+
+<!-- Settings -->
+<VPE_Vein_ResurrectionDelaySettingTitle_STNL>Resurrection Settings</VPE_Vein_ResurrectionDelaySettingTitle_STNL>
+<VPE_Vein_ResurrectionDelaySetting_STNL>Amount of time that it will take for Revenants/Losts to resurrect (in ticks).\n2500 = 1 hour / 60 000 = 1 day / 900 000 = 1 quadrum / 3 600 000 = 1 year</VPE_Vein_ResurrectionDelaySetting_STNL>
+
+<VPE_Vein_DrainAttack_SettingsTitle_STNL>Drain Attack</VPE_Vein_DrainAttack_SettingsTitle_STNL>
+<VPE_Vein_DrainAttack_SkillDrain_GainDivisionSTNL>Divides the value of drained skills by this amount prior to gaining it (1 = full value): {0}</VPE_Vein_DrainAttack_SkillDrain_GainDivisionSTNL>
+
+<VPE_Vein_DrainingSkillRemovesGeneSetting_STNL>Should draining a target remove skill boosting genes?</VPE_Vein_DrainingSkillRemovesGeneSetting_STNL>
+
+<VPE_Vein_DeathAndVestigesSettingsSTNL>Death And Vestiges</VPE_Vein_DeathAndVestigesSettingsSTNL>
+<VPE_Vein_SkillPointsLostOnDeath_STNL>Amount of skill points lost on death: {0}</VPE_Vein_SkillPointsLostOnDeath_STNL>
+<VPE_Vein_VestigeSkillPointsGain_STNL>Amount of skill points gained in every skill upon using a vestige: {0}</VPE_Vein_VestigeSkillPointsGain_STNL>
+<VPE_Vein_VestigePsylinkLevelIncrease_STNL>Using a vestige will increase the psylink level of the user by this amount: {0}</VPE_Vein_VestigePsylinkLevelIncrease_STNL>
+
+<VPE_Vein_DeathSetting_AllowNonPlayerResurrection_STNL>Should non player creatures be able to respawn?</VPE_Vein_DeathSetting_AllowNonPlayerResurrection_STNL>
+<VPE_Vein_DeathSetting_AllowWildLostResurrection_STNL>Should wild Losts be able to respawn?</VPE_Vein_DeathSetting_AllowWildLostResurrection_STNL>
+<VPE_Vein_DeathSetting_DisableResForLosts_STNL>Disable resurrection for Losts</VPE_Vein_DeathSetting_DisableResForLosts_STNL>
+<VPE_Vein_DeathSetting_DisableResForRevs_STNL>Disable resurrection for Revenants</VPE_Vein_DeathSetting_DisableResForRevs_STNL>
+
+<VPE_VeinModSettings_ResetToDefaultSTNL>Reset Settings</VPE_VeinModSettings_ResetToDefaultSTNL>
+</LanguageData>

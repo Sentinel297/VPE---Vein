@@ -1,0 +1,848 @@
+<Defs>
+<HediffDef>
+	<defName>VPE_Vein_Revenant_BaseSTNL</defName>
+	<label>Revenant</label>
+	<description>This person is a creature known as a revenant, they are a creature infected with BOR parasites that will resurrect them on death at the cost of forgetting some of their skills each time they die.</description>
+	<hediffClass>VPE_Vein.Hediff_BaseRevenant</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<modExtensions>
+		<li Class="VPE_Vein.RevenantHediffModExt">
+			<FrenzyIfLostNearby>True</FrenzyIfLostNearby>
+			<ResurrectionNeedsHeart>True</ResurrectionNeedsHeart>
+			<resurrectionCaresAboutMistlePlacement>true</resurrectionCaresAboutMistlePlacement>
+			<FreezeAge>True</FreezeAge>
+			<SpawnVestigeOnDeath>True</SpawnVestigeOnDeath>
+		</li>
+	</modExtensions>
+	<stages>
+		<li>
+			<statFactors>
+				<Fertility>0</Fertility>
+			</statFactors>
+			<enablesNeeds>
+				<li>VPE_Vein_BloodNeedSTNL</li>
+			</enablesNeeds>
+		</li>
+	</stages>
+	<abilities>
+		<li>VPE_Revenant_Drain_Attack_STNL</li>
+	</abilities>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Vein_Revenant_VoidTypeSTNL</defName>
+	<label>Void-Type Revenant</label>
+	<description>This person is a creature known as a revenant, they are a creature infected with BOR parasites that will resurrect them on death at the cost of forgetting some of their skills each time they die.\n\nVoid-Type revenants possess the ability to use vestiges from fallen revenants to increase all of their skills by 1 without entering into a state of frenzy.</description>
+	<hediffClass>VPE_Vein.Hediff_BaseRevenant</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<modExtensions>
+		<li Class="VPE_Vein.RevenantHediffModExt">
+			<FrenzyIfLostNearby>True</FrenzyIfLostNearby>
+			<ResurrectionNeedsHeart>True</ResurrectionNeedsHeart>
+			<resurrectionCaresAboutMistlePlacement>true</resurrectionCaresAboutMistlePlacement>
+			<FreezeAge>True</FreezeAge>
+			<SpawnVestigeOnDeath>True</SpawnVestigeOnDeath>
+		</li>
+	</modExtensions>
+	<stages>
+		<li>
+			<statFactors>
+				<Fertility>0</Fertility>
+			</statFactors>
+			<enablesNeeds>
+				<li>VPE_Vein_BloodNeedSTNL</li>
+			</enablesNeeds>
+		</li>
+	</stages>
+	<abilities>
+		<li>VPE_Revenant_Drain_Attack_STNL</li>
+	</abilities>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Vein_Revenant_Queen_STNL</defName>
+	<label>Queen</label>
+	<description>The Queen is a special type of Revenant that doesn't require a heart for resurrection, Queen Revenants will additionally adapt after each deaths in the same manner as Losts.</description>
+	<hediffClass>VPE_Vein.Hediff_BaseRevenant</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.3, 0.3, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<modExtensions>
+<li Class="VPE_Vein.RevenantHediffModExt">
+	<hediffsToAddOnDeathByRangedDamage>
+		<li>VPE_Vein_DeathAdaptation_Ranged_STNL</li>
+	</hediffsToAddOnDeathByRangedDamage>
+	<hediffsToAddOnDeathByMeleeDamage>
+		<li>VPE_Vein_DeathAdaptation_Melee_STNL</li>
+	</hediffsToAddOnDeathByMeleeDamage>
+	<hediffsToAddOnDeathFromCold>
+	<li>VPE_Vein_DeathAdaptation_Cold_STNL</li>
+	</hediffsToAddOnDeathFromCold>
+	<hediffsToAddOnDeathFromHeat>
+	<li>VPE_Vein_DeathAdaptation_Heat_STNL</li>
+	</hediffsToAddOnDeathFromHeat>
+	<severityToIncreaseThemBy>1</severityToIncreaseThemBy>
+	<FrenzyIfLostNearby>true</FrenzyIfLostNearby>
+	<ResurrectionNeedsHeart>False</ResurrectionNeedsHeart>
+	<resurrectionCaresAboutMistlePlacement>True</resurrectionCaresAboutMistlePlacement>
+	<FreezeAge>True</FreezeAge>
+	<SpawnVestigeOnDeath>True</SpawnVestigeOnDeath>
+</li>
+	</modExtensions>
+	<stages>
+		<li>
+			<statFactors>
+				<Fertility>0</Fertility>
+			</statFactors>
+			<enablesNeeds>
+				<li>VPE_Vein_BloodNeedSTNL</li>
+			</enablesNeeds>
+		</li>
+	</stages>
+	<abilities>
+		<li>VPE_Revenant_Drain_Attack_STNL</li>
+	</abilities>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+	
+<HediffDef>
+	<defName>VPE_Vein_Lost_BaseSTNL</defName>
+	<label>Lost</label>
+	<description>The Lost are Revenants who have turned into dark, malevolent monsters by succumbing to their blood lust and losing their humanity. In order to escape from the suffering of their never-ending thirst for blood, they forever wander the world in search of new blood.\n\nLosts do not need a heart to resurrect.</description>
+	<hediffClass>VPE_Vein.Hediff_BaseRevenant</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0.6, 0.6)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<modExtensions>
+		<li Class="VPE_Vein.RevenantHediffModExt">
+			<hediffsToAddOnDeathByRangedDamage>
+				<li>VPE_Vein_DeathAdaptation_Ranged_STNL</li>
+			</hediffsToAddOnDeathByRangedDamage>
+			<hediffsToAddOnDeathByMeleeDamage>
+				<li>VPE_Vein_DeathAdaptation_Melee_STNL</li>
+			</hediffsToAddOnDeathByMeleeDamage>
+			<hediffsToAddOnDeathFromCold>
+				<li>VPE_Vein_DeathAdaptation_Cold_STNL</li>
+			</hediffsToAddOnDeathFromCold>
+			<hediffsToAddOnDeathFromHeat>
+				<li>VPE_Vein_DeathAdaptation_Heat_STNL</li>
+			</hediffsToAddOnDeathFromHeat>
+			<severityToIncreaseThemBy>1</severityToIncreaseThemBy>
+			<FrenzyIfLostNearby>False</FrenzyIfLostNearby>
+			<ResurrectionNeedsHeart>False</ResurrectionNeedsHeart>
+			<resurrectionCaresAboutMistlePlacement>false</resurrectionCaresAboutMistlePlacement>
+		</li>
+	</modExtensions>
+	<stages>
+		<li>
+			<statFactors>
+				<Fertility>0</Fertility>
+			</statFactors>
+			<enablesNeeds>
+				<li>VPE_Vein_BloodNeedSTNL</li>
+			</enablesNeeds>
+		</li>
+	</stages>
+	<abilities>
+		<li>VPE_Revenant_Drain_Attack_STNL</li>
+	</abilities>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+	<renderNodeProperties>
+		<li Class="PawnRenderNodeProperties_Eye">
+			<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
+			<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+			<anchorTag>RightEye</anchorTag>
+			<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			<parentTagDef>Head</parentTagDef>
+			<drawSize>0.2</drawSize>
+			<side>Right</side>
+			<drawData>
+				<defaultData>
+					<layer>54</layer>
+					<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+			</drawData>
+		</li>
+		<li Class="PawnRenderNodeProperties_Eye">
+			<texPath>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Male/RedEyes_Male</texPath>
+			<texPathFemale>Things/Pawn/Humanlike/HeadAttachments/RedEyes/Female/RedEyes_Female</texPathFemale>
+			<anchorTag>LeftEye</anchorTag>
+			<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			<parentTagDef>Head</parentTagDef>
+			<drawSize>0.2</drawSize>
+			<side>Left</side>
+			<drawData>
+				<defaultData>
+					<layer>54</layer>
+					<offset>(0, 0, -0.25)</offset>
+					<flip>true</flip>
+				</defaultData>
+				<dataWest>
+					<flip>false</flip>
+				</dataWest>
+			</drawData>
+		</li>
+	</renderNodeProperties>
+</HediffDef>
+	
+<HediffDef>
+	<defName>VPE_Vein_FrenzySTNL</defName>
+	<label>Frenzy</label>
+	<description>This creature is frenzying and will turn into a wild lost after some time, killing this creature may prevent the transformation process.</description>
+	<hediffClass>VPE_Vein.Hediff_Frenzy</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.3, 0.3, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<modExtensions>
+		<li Class="VPE_Vein.FrenzyExtension">
+			<hediffsToRemove>
+				<li>VPE_Vein_Revenant_BaseSTNL</li>
+				<li>VPE_Vein_Revenant_VoidTypeSTNL</li>
+				<li>VPE_Vein_Revenant_Queen_STNL</li>
+			</hediffsToRemove>
+		</li>
+	</modExtensions>
+	<stages>
+		<li>
+			</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<!-- Miasma skill hediffs -->
+
+<HediffDef>
+	<defName>VPE_Vein_New_LostResurrection_STNL</defName>
+	<label>Miasma-induced Coma</label>
+	<description>This creature has recently turned into a Lost, it will remain in a coma for some time as the BOR parasite takes hold of its new host.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.3, 0.3, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.05</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0</postFactor>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>20000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Vein_AlliedLostSTNL</defName>
+	<label>Wild Lost</label>
+	<description>This lost is in a state of controlled frenzy, it will attack nearby enemies while ignoring allied creatures as long as there is an enemy in the region.\n\nWild Losts will attack eachother once no more enemies are nearby.</description>
+	<hediffClass>VPE_Vein.Hediff_SummonedLost</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.3, 0.3, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>False</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<!-- Blood Weapon -->
+
+<HediffDef>
+	<defName>VPE_Vein_BloodWeapon_STNL</defName>
+	<label>Blood Weapon</label>
+	<description>This person is using their psyfocus to increase their attack power.</description>
+	<hediffClass>VPE_Vein.Hediff_BloodWeapon</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<modExtensions>
+	
+	</modExtensions>
+	<stages>
+		<li>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<!-- Ichor Medicine -->
+
+<HediffDef>
+	<defName>VPE_Vein_IchorMedicine_STNL</defName>
+	<label>Ichor Medicine</label>
+	<description>This creature's healing speed is being increased by the blood of a Revenant.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+		<statFactors>
+		<InjuryHealingFactor>2</InjuryHealingFactor>
+		<ImmunityGainSpeedFactor>2</ImmunityGainSpeedFactor>
+		</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		<li Class="HediffCompProperties_Disappears">
+		<disappearsAfterTicks>20000</disappearsAfterTicks>
+		<showRemainingTime>true</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef>
+
+<!-- Mistle Protection -->
+
+<HediffDef>
+	<defName>VPE_Vein_MistleProtection_STNL</defName>
+	<label>Mistle's Protection</label>
+	<description>This Revenant's toxic environement resistance is being increased by a nearby Mistle.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0.6, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statOffsets>
+				<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+			</statOffsets>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>180</disappearsAfterTicks>
+			<showRemainingTime>false</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef>
+
+<!-- Blood Coma -->
+
+<HediffDef>
+	<defName>VPE_Vein_Red_Mist_Coma_STNL</defName>
+	<label>Channeling Red Mist</label>
+	<description>This person is channeling a crimson mist around the colony in order to prevent incidents.</description>
+	<hediffClass>VPE_Vein.Hediff_RedMistComa</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.05</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0</postFactor>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+
+<!-- Death Adaptation Hediffs -->
+
+<HediffDef>
+	<defName>VPE_Vein_DeathAdaptation_Ranged_STNL</defName>
+	<label>Miasmatic Evolution (Ranged)</label>
+	<description>This entity is showing signs of adaptation to the situation that led to its demise.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>10</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.3, 0.3, 0.7)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statFactorsBySeverity>
+				<li>
+					<stat>MoveSpeed</stat>
+					<valueBySeverity>
+						<points>
+							<li>(0, 0)</li>
+							<li>(1, 1)</li>
+							<li>(10, 5)</li>
+						</points>
+					</valueBySeverity>
+				</li>
+			</statFactorsBySeverity>
+			<!-- <statOffsets> -->
+			<!-- <VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance> -->
+			<!-- <ComfyTemperatureMin>-30</ComfyTemperatureMin> -->
+			<!-- <ComfyTemperatureMax>30</ComfyTemperatureMax> -->
+			<!-- <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> -->
+			<!-- </statOffsets> -->
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Vein_DeathAdaptation_Melee_STNL</defName>
+	<label>Miasmatic Evolution (Melee)</label>
+	<description>This entity is showing signs of adaptation to the situation that led to its demise.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>9999999</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.3, 0.3, 0.7)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statFactorsBySeverity>
+				<li>
+					<stat>IncomingDamageFactor</stat>
+					<valueBySeverity>
+						<points>
+							<li>(0, 1)</li>
+							<li>(1, 0.90)</li>
+							<li>(30, 0.25)</li>
+						</points>
+					</valueBySeverity>
+				</li>
+			</statFactorsBySeverity>
+			<!-- <statOffsets> -->
+			<!-- <VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance> -->
+			<!-- <ComfyTemperatureMin>-30</ComfyTemperatureMin> -->
+			<!-- <ComfyTemperatureMax>30</ComfyTemperatureMax> -->
+			<!-- <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> -->
+			<!-- </statOffsets> -->
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Vein_DeathAdaptation_Cold_STNL</defName>
+	<label>Miasmatic Evolution (Cold)</label>
+	<description>This entity is showing signs of adaptation to the situation that led to its demise.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>20</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0.6, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statOffsetsBySeverity>
+				<li>
+					<stat>ComfyTemperatureMin</stat>
+					<valueBySeverity>
+						<points>
+							<li>(0, -1)</li>
+							<li>(1, -10)</li>
+							<li>(20, -999)</li>
+						</points>
+					</valueBySeverity>
+				</li>
+			</statOffsetsBySeverity>
+			<!-- <statOffsets> -->
+			<!-- <VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance> -->
+			<!-- <ComfyTemperatureMin>-30</ComfyTemperatureMin> -->
+			<!-- <ComfyTemperatureMax>30</ComfyTemperatureMax> -->
+			<!-- <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> -->
+			<!-- </statOffsets> -->
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Vein_DeathAdaptation_Heat_STNL</defName>
+	<label>Miasmatic Evolution (Heat)</label>
+	<description>This entity is showing signs of adaptation to the situation that led to its demise.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>20</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0.6, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statOffsetsBySeverity>
+				<li>
+					<stat>ComfyTemperatureMax</stat>
+					<valueBySeverity>
+						<points>
+							<li>(0, 1)</li>
+							<li>(1, 10)</li>
+							<li>(20, 999)</li>
+						</points>
+					</valueBySeverity>
+				</li>
+			</statOffsetsBySeverity>
+			<!-- <statOffsets> -->
+			<!-- <VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance> -->
+			<!-- <ComfyTemperatureMin>-30</ComfyTemperatureMin> -->
+			<!-- <ComfyTemperatureMax>30</ComfyTemperatureMax> -->
+			<!-- <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> -->
+			<!-- </statOffsets> -->
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef MayRequire="Ludeon.Rimworld.Odyssey">
+	<defName>VPE_Vein_AbsorbedGhoulVacImmunity_STNL</defName>
+	<label>Vacuum-proof Revenant</label>
+	<description>This Revenant has absorbed a special gene from a ghoul, allowing them to survive the lack of oxygen in orbit.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>20</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statOffsets>
+			<VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance>
+			</statOffsets>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef MayRequire="Ludeon.Rimworld.Odyssey">
+	<defName>VPE_Vein_AbsorbedMetalHorror_RevenantProduction_STNL</defName>
+	<label>Bio-Revenant</label>
+	<description>This Revenant has absorbed a special gene from a Metalhorror, allowing them to produce 20 bioferrite every 48 hours.</description>
+	<hediffClass>VPE_Vein.Hediff_BioferriteMaker</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>20</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statOffsets>
+			<VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance>
+			</statOffsets>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<!-- Dark Psychic Shock -->
+
+<HediffDef>
+	<defName>VPE_Vein_Revenant_DarkPsychicShock_STNL</defName>
+	<label>Dark Psychic Coma</label>
+	<description>A Revenant has used a dark psychic attack on this creature, leaving it unable to move for a while.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.05</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0</postFactor>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>20000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef>
+
+<!-- Noctol Passive -->
+
+<HediffDef>
+	<defName>VPE_Vein_Revenant_AbsorbedNoctolPassive_STNL</defName>
+	<label>Shadow Revenant</label>
+	<description>This Revenant has adapted to draw strength from the dark after draining a Noctol, they will gain increased move speed in the dark.</description>
+	<hediffClass>VPE_Vein.Hediff_NoctolAdapation</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>2</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.5, 0, 0.5)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<minSeverity>0</minSeverity>
+		</li>
+		<li>
+			<minSeverity>2</minSeverity>
+			<label>Active</label>
+			<statFactors>
+				<MoveSpeed>3</MoveSpeed>
+				<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<!-- Chimera Passive -->
+
+<HediffDef>
+	<defName>VPE_Vein_Revenant_AbsorbedChimeraPassive_STNL</defName>
+	<label>Vengeful Revenant</label>
+	<description>This Revenant has adapted after draining a Chimera, they will enter a state of rage for a short time after taking damage.</description>
+	<hediffClass>VPE_Vein.Hediff_RageSpeedEnabler</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>2</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+</Defs>
