@@ -590,7 +590,7 @@
 	<description>Release miasma across the entire region, animating all humanlike corpses as Lost after a long coma.</description>
 	<iconPath>UI_VeinSTNL/Abilities/Vein/Gaol</iconPath>
 	<!-- <durationTime>30000</durationTime> -->
-	<castTime>15</castTime>
+	<castTime>120</castTime>
 	<targetMode>Self</targetMode>
 	<!-- <targetingParameters> -->
 	<!-- <canTargetLocations>false</canTargetLocations> -->
@@ -682,7 +682,7 @@
 	<description>Awaken the long buried intelligence of a Lost, allowing them to use equipment and granting them the ability to work.</description>
 	<iconPath>UI_VeinSTNL/Abilities/Vein/BOR_Awakening</iconPath>
 	<!-- <durationTime>30000</durationTime> -->
-	<castTime>15</castTime>
+	<castTime>90</castTime>
 	<targetMode>Pawn</targetMode>
 	<targetingParameters>
 	<canTargetLocations>false</canTargetLocations>
@@ -727,7 +727,7 @@
 	<description>Cause a sudden growth of a large blood spring concentration in the target area.</description>
 	<iconPath>UI_VeinSTNL/Abilities/Vein/BloodForestSTNL</iconPath>
 	<!-- <durationTime>30000</durationTime> -->
-	<castTime>15</castTime>
+	<castTime>180</castTime>
 	<targetMode>Location</targetMode>
 	<targetingParameters>
 	<canTargetLocations>true</canTargetLocations>
@@ -774,7 +774,7 @@
 	<description>Release a large amount of miasma into the ground, causing a horde of loyal Losts to emerge from the ground to fight your foes.</description>
 	<iconPath>UI_VeinSTNL/Abilities/Vein/GreatCollapse</iconPath>
 	<!-- <durationTime>30000</durationTime> -->
-	<castTime>15</castTime>
+	<castTime>180</castTime>
 	<targetMode>Location</targetMode>
 	<targetingParameters>
 	<canTargetLocations>true</canTargetLocations>
@@ -863,10 +863,10 @@
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_Vein_Queen_STNL</defName>
 	<label>Queen</label>
-	<description>Create a modified BOR Parasite, a perfect fusion between both Revenant and Lost, when inserted into a host it will grant them both the Immortality and constant growth through death of the lost as well as the capability of using psychic abilities.\n\nUsing this ability on a target will kill them and the caster, the target will eventually return after some time while the caster won't.\n\nThe user must have a level 30 or higher psylink to use this ability on themselves, which will result in them gaining the bonus of this ability without dying.</description>
+	<description>Create a modified BOR Parasite, a perfect fusion between both Revenant and Lost, when inserted into a host it will grant them both the Immortality and constant growth through death of the lost as well as the capability of using psychic abilities.\n\nUsing this ability on a target will kill them and the caster, the target will eventually return after some time while the caster won't.\n\nThe user must have a level 30 or higher psylink to use this ability on themselves, which will result in them gaining the Queen hediff without dying.</description>
 	<iconPath>UI_VeinSTNL/Abilities/Vein/Wrath</iconPath>
 	<!-- <durationTime>30000</durationTime> -->
-	<castTime>15</castTime>
+	<castTime>300</castTime>
 	<targetMode>Pawn</targetMode>
 	<targetingParameters>
 	<canTargetLocations>false</canTargetLocations>
