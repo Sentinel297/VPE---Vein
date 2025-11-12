@@ -37,5 +37,9 @@
 <VPE_Vein_DeathSetting_DisableResForLosts_STNL>Disable resurrection for Losts</VPE_Vein_DeathSetting_DisableResForLosts_STNL>
 <VPE_Vein_DeathSetting_DisableResForRevs_STNL>Disable resurrection for Revenants</VPE_Vein_DeathSetting_DisableResForRevs_STNL>
 
+<VPE_Vein_MistleMiasmaSetting_ShouldItIgnoreRoomChecks_STNL>Should the miasma emanated by Losts be able to pass through walls without vents? (includes Mistle protection radius)</VPE_Vein_MistleMiasmaSetting_ShouldItIgnoreRoomChecks_STNL>
+
+<VPE_Vein_MiscSettings_STNL>Misc Settings</VPE_Vein_MiscSettings_STNL>
+
 <VPE_VeinModSettings_ResetToDefaultSTNL>Reset Settings</VPE_VeinModSettings_ResetToDefaultSTNL>
 </LanguageData>

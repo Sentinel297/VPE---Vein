@@ -250,8 +250,8 @@
         <burstCount>8~10</burstCount>
         <angle>0~360</angle>
         <positionOffset>(0, 0, 0)</positionOffset>
-        <positionRadius>.5</positionRadius>
-        <positionRadiusMin>.5</positionRadiusMin>
+        <positionRadius>0</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
         <rotationRate>-600~600</rotationRate>
         <rotation>0~360</rotation>
         <speed>15~35</speed>
