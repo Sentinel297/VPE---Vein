@@ -272,7 +272,7 @@
 			</li>
 	</stages>
 	<comps>
-		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
 		<!-- <li Class="HediffCompProperties_Disappears"> -->
 		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
 		<!-- <showRemainingTime>true</showRemainingTime> -->
