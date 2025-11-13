@@ -37,7 +37,7 @@
 	</thingCategories>
 	<ingestible>
 		<foodType>Fluid</foodType>
-		<preferability>DesperateOnly</preferability>
+		<preferability>NeverForNutrition</preferability>
 		<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
 		<!-- <specialThoughtDirect>IngestedBloodBeadSTNL</specialThoughtDirect> -->
 		<ingestSound>HemogenPack_Consume</ingestSound>
@@ -50,7 +50,7 @@
 	<comps>
 		<li Class="CompProperties_Forbiddable"/>
 		<!-- <li Class="VPE_Bloodcode.CompProperties_RestoreNeed"> -->
-			<!-- <amount>1</amount> -->
+		<!-- <amount>1</amount> -->
 		<!-- </li> -->
 	</comps>
 </ThingDef>

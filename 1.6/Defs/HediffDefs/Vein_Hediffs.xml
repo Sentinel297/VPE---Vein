@@ -107,26 +107,26 @@
 	<everCurableByItem>false</everCurableByItem>
 	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
 	<modExtensions>
-<li Class="VPE_Vein.RevenantHediffModExt">
-	<hediffsToAddOnDeathByRangedDamage>
-		<li>VPE_Vein_DeathAdaptation_Ranged_STNL</li>
-	</hediffsToAddOnDeathByRangedDamage>
-	<hediffsToAddOnDeathByMeleeDamage>
-		<li>VPE_Vein_DeathAdaptation_Melee_STNL</li>
-	</hediffsToAddOnDeathByMeleeDamage>
-	<hediffsToAddOnDeathFromCold>
-	<li>VPE_Vein_DeathAdaptation_Cold_STNL</li>
-	</hediffsToAddOnDeathFromCold>
-	<hediffsToAddOnDeathFromHeat>
-	<li>VPE_Vein_DeathAdaptation_Heat_STNL</li>
-	</hediffsToAddOnDeathFromHeat>
-	<severityToIncreaseThemBy>1</severityToIncreaseThemBy>
-	<FrenzyIfLostNearby>true</FrenzyIfLostNearby>
-	<ResurrectionNeedsHeart>False</ResurrectionNeedsHeart>
-	<resurrectionCaresAboutMistlePlacement>True</resurrectionCaresAboutMistlePlacement>
-	<FreezeAge>True</FreezeAge>
-	<SpawnVestigeOnDeath>True</SpawnVestigeOnDeath>
-</li>
+		<li Class="VPE_Vein.RevenantHediffModExt">
+			<hediffsToAddOnDeathByRangedDamage>
+				<li>VPE_Vein_DeathAdaptation_Ranged_STNL</li>
+			</hediffsToAddOnDeathByRangedDamage>
+			<hediffsToAddOnDeathByMeleeDamage>
+				<li>VPE_Vein_DeathAdaptation_Melee_STNL</li>
+			</hediffsToAddOnDeathByMeleeDamage>
+			<hediffsToAddOnDeathFromCold>
+				<li>VPE_Vein_DeathAdaptation_Cold_STNL</li>
+			</hediffsToAddOnDeathFromCold>
+			<hediffsToAddOnDeathFromHeat>
+				<li>VPE_Vein_DeathAdaptation_Heat_STNL</li>
+			</hediffsToAddOnDeathFromHeat>
+			<severityToIncreaseThemBy>1</severityToIncreaseThemBy>
+			<FrenzyIfLostNearby>true</FrenzyIfLostNearby>
+			<ResurrectionNeedsHeart>False</ResurrectionNeedsHeart>
+			<resurrectionCaresAboutMistlePlacement>True</resurrectionCaresAboutMistlePlacement>
+			<FreezeAge>True</FreezeAge>
+			<SpawnVestigeOnDeath>True</SpawnVestigeOnDeath>
+		</li>
 	</modExtensions>
 	<stages>
 		<li>
