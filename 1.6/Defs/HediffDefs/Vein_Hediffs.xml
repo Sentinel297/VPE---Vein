@@ -706,7 +706,7 @@
 	</comps>
 </HediffDef>
 
-<HediffDef MayRequire="Ludeon.Rimworld.Odyssey">
+<HediffDef>
 	<defName>VPE_Vein_AbsorbedMetalHorror_RevenantProduction_STNL</defName>
 	<label>Bio-Revenant</label>
 	<description>This Revenant has absorbed a special gene from a Metalhorror, allowing them to produce 20 bioferrite every 48 hours.</description>
