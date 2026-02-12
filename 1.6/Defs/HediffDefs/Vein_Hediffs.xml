@@ -121,7 +121,7 @@
 				<li>VPE_Vein_DeathAdaptation_Heat_STNL</li>
 			</hediffsToAddOnDeathFromHeat>
 			<severityToIncreaseThemBy>1</severityToIncreaseThemBy>
-			<FrenzyIfLostNearby>true</FrenzyIfLostNearby>
+			<FrenzyIfLostNearby>false</FrenzyIfLostNearby>
 			<ResurrectionNeedsHeart>False</ResurrectionNeedsHeart>
 			<resurrectionCaresAboutMistlePlacement>True</resurrectionCaresAboutMistlePlacement>
 			<FreezeAge>True</FreezeAge>
@@ -141,6 +141,44 @@
 	<abilities>
 		<li>VPE_Revenant_Drain_Attack_STNL</li>
 	</abilities>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Vein_Revenant_Queen_Coma_STNL</defName>
+	<label>Blood Deficiency</label>
+	<description>This Queen has entered into a coma due to a lack of blood. Consuming blood will cure this condition.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.3, 0.3, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>True</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<setMax>0</setMax>
+				</li>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.01</setMax>
+				</li>
+			</capMods>
+		</li>
+	</stages>
 	<comps>
 		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
 		<!-- <li Class="HediffCompProperties_Disappears"> -->
